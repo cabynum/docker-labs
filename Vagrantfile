@@ -111,10 +111,7 @@ Vagrant.configure(2) do |config|
     sudo apt-get -y install zsh
     sudo -H -u vagrant bash -c 'git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh'
     sudo curl -L https://raw.githubusercontent.com/cabynum/docker-labs/master/docker-labs.zshrc > /home/vagrant/.zshrc
-    # sudo -H -u vagrant bash -c 'cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc'
     sudo chsh -s $(which zsh) vagrant
-    # sudo sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="agnoster"/g' /home/vagrant/.zshrc
-    # sudo sed -i 's/plugins=(git)/plugins=(git docker aws)/g' /home/vagrant/.zshrc
     sudo -H -u vagrant bash -c 'zsh'
   SHELL
 end
