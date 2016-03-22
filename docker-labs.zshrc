@@ -1,7 +1,13 @@
-source ~/terminal.zsh
+function tabname {
+  printf "\e]1;$1\a"
+}
+
+function winname {
+  printf "\e]2;$1\a"
+}
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/chris/.oh-my-zsh
+export ZSH=/home/vagrant/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
