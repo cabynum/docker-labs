@@ -27,7 +27,7 @@ Vagrant.configure(2) do |config|
 
   config.vm.define "node0" do |node0|
     node0.vm.hostname = "node0"
-    node0.vm.network "private_network", ip: "10.1.1.10"
+    node0.vm.network "private_network", ip: "192.168.33.10"
     node0.vm.provider "virtualbox" do |vb|
       vb.name = "docker-labs.node0"
       vb.memory = "4096"
@@ -37,7 +37,7 @@ Vagrant.configure(2) do |config|
 
   config.vm.define "node1" do |node1|
     node1.vm.hostname = "node1"
-    node1.vm.network "private_network", ip: "10.1.1.11"
+    node1.vm.network "private_network", ip: "192.168.33.11"
     node1.vm.provider "virtualbox" do |vb|
       vb.name = "docker-labs.node1"
       vb.memory = "4096"
@@ -47,7 +47,7 @@ Vagrant.configure(2) do |config|
 
   config.vm.define "node2" do |node2|
     node2.vm.hostname = "node2"
-    node2.vm.network "private_network", ip: "10.1.1.12"
+    node2.vm.network "private_network", ip: "192.168.33.12"
     node2.vm.provider "virtualbox" do |vb|
       vb.name = "docker-labs.node2"
       vb.memory = "4096"
