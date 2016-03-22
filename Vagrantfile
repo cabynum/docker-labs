@@ -108,6 +108,8 @@ Vagrant.configure(2) do |config|
         sudo chmod +x /usr/local/bin/docker-compose
         sudo usermod -aG docker vagrant
     fi
+    sudo apt-get update
+    sudo apt-get install -y tree
     sudo apt-get -y install zsh
     sudo -H -u vagrant bash -c 'git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh'
     sudo curl -L https://raw.githubusercontent.com/cabynum/docker-labs/master/docker-labs.zshrc > /home/vagrant/.zshrc
