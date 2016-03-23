@@ -50,7 +50,7 @@ Vagrant.configure(2) do |config|
   config.vm.define "node2" do |node2|
     node2.vm.hostname = "node2"
     node2.vm.network "private_network", ip: "192.168.33.12"
-    node2.vm.network "public_network", ip: "192.168.3.120", bridge: "en0: Wi-Fi (AirPort)"
+    node2.vm.network "public_network", ip: "192.168.33.120", bridge: "en0: Wi-Fi (AirPort)"
     node2.vm.provider "virtualbox" do |vb|
       vb.name = "docker-labs.node2"
       vb.memory = "4096"
