@@ -58,6 +58,16 @@ Vagrant.configure(2) do |config|
     end
   end
 
+  config.vm.define "node3" do |node3|
+    node3.vm.hostname = "node3"
+    node3.vm.network "private_network", ip: "192.168.33.13"
+    node3.vm.network "public_network", ip: "192.168.33.130", bridge: "en0: Wi-Fi (AirPort)"
+    node3.vm.provider "virtualbox" do |vb|
+      vb.name = "docker-labs.node3"
+      vb.memory = "4096"
+      vb.cpus = "2"
+    end
+  end
   # Create a public network, which generally matched to bridged network.
   # Bridged networks make the machine appear as another physical device on
   # your network.
